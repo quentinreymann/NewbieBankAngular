@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AcceuilComponent } from './components/acceuil/acceuil.component';
 import { ClientComponent } from './components/client/client.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,14 @@ import { ClientComponent } from './components/client/client.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([
+
+      {
+        path: '',
+        component: AcceuilComponent
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

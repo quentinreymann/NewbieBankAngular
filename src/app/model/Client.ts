@@ -1,15 +1,15 @@
 import { Compte } from './Compte';
 
 export class Client {
-    private id: number;
-	private nomClient: string;
-	private prenomClient: string;
-	private adresseClient: string;
-	private age: number;
-	private dateEnregistrement: string;
-	private sexe: string;
-	private telClient: string;
-    private comptes: Compte[];
+   public id: number;
+	public nomClient: string;
+	public prenomClient: string;
+	public adresseClient: string;
+	public age: number;
+	public dateEnregistrement: string;
+	public sexe: string;
+	public telClient: string;
+   public comptes: Compte[];
    
  constructor(id: number, nom: string, prenom: string, adresse: string,
     age: number, datee: string, sexe: string, tel: string, cpts: Compte[])
