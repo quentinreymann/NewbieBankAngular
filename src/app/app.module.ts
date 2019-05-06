@@ -9,8 +9,13 @@ import { RouterModule } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { Acceuil2Component } from './components/acceuil2/acceuil2.component';
-import { FraisIncompressibleComponent } from './components/fraisincompressible/frais-incompressible.component';
+// import { Acceuil2Component } from './components/acceuil2/acceuil2.component';
+// import { FraisIncompressibleComponent } from './components/fraisincompressible/frais-incompressible.component';
+import { NewclientComponent } from './components/newclient/newclient.component';
+import { ClientlistComponent } from './components/clientlist/clientlist.component';
+import { ResumeclientComponent } from './components/resumeclient/resumeclient.component';
+import { ClientdetailsComponent } from './components/clientdetails/clientdetails.component';
+
 
 
 @NgModule({
@@ -18,8 +23,13 @@ import { FraisIncompressibleComponent } from './components/fraisincompressible/f
     AppComponent,
     AcceuilComponent,
     ClientComponent,
-    Acceuil2Component,
-    FraisIncompressibleComponent
+    NewclientComponent,
+    ClientlistComponent,
+    ResumeclientComponent,
+    ClientdetailsComponent,
+
+    // Acceuil2Component,
+   // FraisIncompressibleComponent
   ],
   imports: [
     BrowserModule,
@@ -30,12 +40,40 @@ import { FraisIncompressibleComponent } from './components/fraisincompressible/f
 
       {
         path: '',
-        component: Acceuil2Component
+        component: AcceuilComponent
       },
       {
-        path: 'fraisIncompressibles',
-        component: FraisIncompressibleComponent
+        path: 'client',
+        component: ClientComponent
+      },
+      {
+        path: 'ajouterclient',
+        component: NewclientComponent
+      },
+      {
+        path: 'consulter',
+        component: ClientlistComponent
+      },
+      {
+        path: 'client/:client_id',
+        component: ClientdetailsComponent
       }
+    ,
+    {
+      path: 'ajouterclient/:client_id',
+      component: NewclientComponent
+    },
+
+
+
+      // {
+      //   path: '',
+      //   component: Acceuil2Component
+      // },
+      // {
+      //   path: 'fraisIncompressibles',
+      //   component: FraisIncompressibleComponent
+      // }
     ])
   ],
   providers: [],

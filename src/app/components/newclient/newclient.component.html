@@ -7,9 +7,9 @@
   <fieldset>
     <legend>Coordonnées</legend> 
      <label for="titre">Sexe : </label>
-     <select name="titre">
-      <option value="Mme" [(ngModel)]="client_in_progress.sexe" selected="selected">Femme</option>
-      <option value="Mr">Homme</option>
+     <select name="titre" [(ngModel)]="client_in_progress.sexe">
+      <option value="Femme"  selected="selected">Femme</option>
+      <option value="Homme" >Homme</option>
      </select>
      <br /> <br>
      <label for="nom">Nom:</label>
@@ -22,7 +22,8 @@
      <input type="text" [(ngModel)]="client_in_progress.age" name="age" id="age" />
     <br /> <br>
      <label for="tel">Téléphone:</label>
-      <input type="text" [(ngModel)]="client_in_progress.telClient" name="tel" id="tel" /><br /> <br>
+      <input type="text" [(ngModel)]="client_in_progress.telClient" name="tel" id="tel" />
+      <br /> <br>
      <label for="adresse">Adresse:</label>
       <input type="adresse" [(ngModel)]="client_in_progress.adresseClient" name="adresse" id="adresse" />
      <br /> <br>
@@ -30,10 +31,7 @@
      <input type="text" [(ngModel)]="client_in_progress.dateEnregistrement" name="date" id="date" />
     <br /> <br>
   </fieldset>
-    
-  
 <div class="input-group">
   <input type="button" value="Nouveau Client" (click)="addUpdateClientClicked()"/>
 </div>
-
   </form>

@@ -39,6 +39,7 @@ console.log(this.client_in_progress);
   }
 
   public addUpdateClientClicked(): void {
+    console.log(this.client_in_progress.sexe);
     if (this.mode_access === 'MODIFICATION') {
       this.updateClient(this.client_in_progress);
     } else {
