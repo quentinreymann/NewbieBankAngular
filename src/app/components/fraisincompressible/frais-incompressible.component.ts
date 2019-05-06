@@ -10,6 +10,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class FraisIncompressibleComponent implements OnInit {
 
   frais_connu: FraisIncompressibles;
+  mode_access: string;
 
   constructor( private router: Router, private route: ActivatedRoute, private FraisIncService: FraisIncServiceService) {
     this.frais_connu = FraisIncompressibles.createBlank();
@@ -21,7 +22,7 @@ export class FraisIncompressibleComponent implements OnInit {
       if (params.get('idFraisIncompressible') != null) {
         console.log(params.get('idFraisIncompressible'));
         this.mode_access = 'MODIFICATION';
-        this.FraisIncompressiblesService.getRecipeById(parseInt(params.get('idFraisIncompressible'), 10)).subscribe(
+        this.FraisIncService.getRecipeById(parseInt(params.get('idFraisIncompressible'), 10)).subscribe(
           (response) => {
             this.frais_connu = response;
           }
@@ -46,25 +47,25 @@ export class FraisIncompressibleComponent implements OnInit {
     this.frais_connu.FraisIncompressibles.splice(index, 1);
   }
 
-  public updateRecipe(recipe: Recipe): void {
-    this.recipeService.updateRecipe(this.recipe_in_progress).subscribe(
+  public UpdateFraisIncompressibleClicked(FraisIncompressibles: FraisIncompressibles): void {
+    this.FraisIncService.UpdateFraisIncompressibleClicked(this.frais_connu).subscribe(
       (response) => {
-        this.router.navigateByUrl('/recipes');
+        this.router.navigateByUrl('/fraisincform');
       }
     );
   }
-  public addRecipe(recipe: Recipe): void {
-    this.recipeService.createRecipe(this.recipe_in_progress).subscribe(
+  public addFraisIncompressible(FraisIncompressibles: FraisIncompressibles): void {
+    this.FraisIncService.createFraisIncompressible(this.frais_connu).subscribe(
       (response) => {
-        this.router.navigateByUrl('/recipes');
+        this.router.navigateByUrl('/fraisincform');
       }
     );
   }
-  public addUpdateRecipeClicked(): void {
+  public addUpdateFraisIncompressibleClicked(): void {
     if (this.mode_access === 'MODIFICATION') {
-      this.updateRecipe(this.recipe_in_progress);
+      this.updateFraisIncompressible(this.frais_connu);
     } else {
-      this.addRecipe(this.recipe_in_progress);
+      this.addFraisIncompressible(this.frais_connu);
     }
   }
 }

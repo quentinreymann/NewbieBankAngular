@@ -1,0 +1,127 @@
+
+h1
+{
+  font-size: 150px;
+  text-shadow: -1px -1px rgb(238, 238, 238), 1px 1px #888, -3px 0 4px #000;
+  font-family:"Segoe print", Arial, Helvetica, sans-serif;
+  color:rgb(121, 191, 238);
+  padding:4px;
+  font-weight:lighter;
+  -moz-box-shadow: 2px 2px 6px #888;  
+  -webkit-box-shadow: 2px 2px 6px #888;  
+  box-shadow:2px 2px 6px #888;  
+  text-align:center;
+  display: block;
+  line-height:300px;
+  
+}
+
+h2 {
+    color: black;
+    text-align: center
+}
+
+nav ul {
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+nav li {
+	list-style-type: none;
+	float: left;
+}
+
+nav {
+	width: 100%;
+	
+	font-size: 25px;
+}
+
+nav a {
+	display: inline-block;
+	text-decoration: none;
+	padding: 20px 30px;
+	color: black;
+	text-align: center;
+}
+
+.menu-clients:hover {
+	border-top: 5px solid #4D9FD6;
+}
+
+.menu-comptes:hover {
+	border-top: 5px solid #4D9FD6;
+}
+
+.menu-virements:hover {
+	border-top: 5px solid #4D9FD6;
+}
+
+.menu-frais:hover {
+	border-top: 5px solid #4D9FD6;
+}
+
+nav li:hover a {
+	padding: 15 px 30px 20px 30px;
+}
+
+.ribbon:after, .ribbon:before {
+    margin-top:0.5em;
+    content: "";
+    float:left;
+    border:1.5em solid rgb(0, 140, 255);
+  }
+  
+  .ribbon:after {
+    border-right-color:transparent;
+  }
+  
+  .ribbon:before {
+    border-left-color:transparent;
+  }
+
+  .ribbon a:link, .ribbon a:visited { 
+    color:white;
+    text-decoration:none;
+    float:left;
+    height:5em;
+    overflow:hidden;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .ribbon span {
+    background: rgb(0, 140, 255);
+    display:inline-block;
+    line-height:3em;
+    padding:0 8em;
+    margin-top:0.5em;
+    position:relative;
+    transition: background-color 0.2s, margin-top 0.2s;
+  }
+  
+  .ribbon a:hover span {
+    background: rgb(173, 86, 231);
+    margin-top:0;
+  }
+  
+  .ribbon span:before {
+    content: "";
+    position:absolute;
+    top:3em;
+    left:0;
+    border-right:0.5em solid rgb(173, 86, 231);
+    border-bottom:0.5em solid #fff;
+  }
+  
+  .ribbon span:after {
+    content: "";
+    position:absolute;
+    top:3em;
+    right:0;
+    border-left:0.5em solid rgb(173, 86, 231);
+    border-bottom:0.5em solid #fff;
+  }
+  

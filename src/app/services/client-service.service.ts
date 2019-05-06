@@ -17,6 +17,7 @@ export class ClientServiceService {
   };
 
   constructor(private http: HttpClient) { }
+
   public getAllClients(): Observable<any> {
     return this.http.get<Client>(RECIPE_SERVER + '/client/Clients');
   }

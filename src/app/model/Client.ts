@@ -10,6 +10,8 @@ export class Client {
 	public sexe: string;
 	public telClient: string;
    public comptes: Compte[];
+  
+ 
    
  constructor(id: number, nom: string, prenom: string, adresse: string,
     age: number, datee: string, sexe: string, tel: string, cpts: Compte[])
@@ -25,5 +27,13 @@ export class Client {
     this.telClient = tel;
     this.comptes = cpts;
  }
+
+ public static createBlank(): Client {
+   return new Client(-1, '', '', '', 1, '', '', '', []);
+}
  
+ public static clientFromJSON(obj: any): Client {
+   return new Client(obj.id, obj.nomClient, obj.prenomClient, obj.adresseClient, obj.age,
+       obj.dateEnregistrement, obj.sexe, obj.telClient, obj.comptes);
+}
 }
