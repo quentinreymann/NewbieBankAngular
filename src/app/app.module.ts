@@ -11,6 +11,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Acceuil2Component } from './components/acceuil2/acceuil2.component';
 import { FraisIncompressibleComponent } from './components/fraisincompressible/frais-incompressible.component';
+import { NewclientComponent } from './components/newclient/newclient.component';
+import { FraisincformComponent } from './components/fraisincform/fraisincform.component';
+import { TableaufraisComponent } from './components/tableaufrais/tableaufrais.component';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { FraisIncompressibleComponent } from './components/fraisincompressible/f
     AcceuilComponent,
     ClientComponent,
     Acceuil2Component,
-    FraisIncompressibleComponent
+    FraisIncompressibleComponent,
+    NewclientComponent,
+    FraisincformComponent,
+    TableaufraisComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +41,26 @@ import { FraisIncompressibleComponent } from './components/fraisincompressible/f
       {
         path: 'fraisIncompressibles',
         component: FraisIncompressibleComponent
+      },
+      {
+        path: '',
+        component: AcceuilComponent
+      },
+      {
+        path: 'client',
+        component: ClientComponent
+      },
+      {
+        path: 'ajouterclient',
+        component: NewclientComponent
+      },
+      {
+        path: 'ajouterclient/:client_id',
+        component: NewclientComponent
+      },
+      {
+        path: 'fraisincform',
+        component: FraisincformComponent
       }
     ])
   ],

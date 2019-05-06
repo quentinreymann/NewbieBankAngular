@@ -12,7 +12,8 @@ export class Compte {
     private Client: Client;
     
     constructor(idCpt: number, codecpt: number, datec: string, solde: number,
-        decouv: number, plaf: number, codec: string, Client: Client ) {
+                // tslint:disable-next-line:no-shadowed-variable
+                decouv: number, plaf: number, codec: string, Client: Client ) {
 
             this.idCompte = idCpt;
             this.codeCompte = codecpt;
