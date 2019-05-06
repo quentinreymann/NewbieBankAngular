@@ -8,6 +8,7 @@
   <li><a class="active" (click)= "goBackButtonPressed()">Acceuil</a></li>
   <li><a href="#">Consuler la liste des Clients</a></li>
   <li><a (click)="ajouterclient()">Ajouter un Client</a></li>
+  <li><a (click)="modifierclient()">Modifier un Client</a></li>
   <li><a href="#">Supprimer un Client</a></li>
 </ul>
 
@@ -15,4 +16,8 @@
   <h2>Gestion des Clients</h2>
   <h3>Cette page permet de gérer les clients de NewbieBank</h3>
   <p>Vous pouvez consulter la liste des clients, ajouter un nouveau client ou supprimer un client </p>
+</div>
+
+<div class="input-group">
+  <input type="button" value="Nouveau Client" (click)="addUpdateClientClicked()"/>
 </div>

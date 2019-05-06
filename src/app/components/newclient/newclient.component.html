@@ -6,39 +6,34 @@
 <form method="post" action="questionnaire.php">
   <fieldset>
     <legend>Coordonnées</legend> 
-     <label for="titre">Titre : </label>
+     <label for="titre">Sexe : </label>
      <select name="titre">
-      <option value="Mme" selected="selected">Madame</option>
-      <option value="Mr">Monsieur</option>
+      <option value="Mme" [(ngModel)]="client_in_progress.sexe" selected="selected">Femme</option>
+      <option value="Mr">Homme</option>
      </select>
      <br /> <br>
      <label for="nom">Nom:</label>
-      <input type="text" name="nom" id="nom" />
+      <input type="text" [(ngModel)]="client_in_progress.nomClient" name="nom" id="nom" />
      <br /> <br>
      <label for="prenom">Prénom:</label>
-      <input type="text" name="prenom" id="prenom" />
+      <input type="text" [(ngModel)]="client_in_progress.prenomClient" name="prenom" id="prenom" />
      <br /> <br>
-     <label for="email">Email:</label>
-      <input type="text" name="email" id="email" />
-     <br /> <br>
+     <label for="age">Age:</label>
+     <input type="text" [(ngModel)]="client_in_progress.age" name="age" id="age" />
+    <br /> <br>
      <label for="tel">Téléphone:</label>
-      <input type="text" name="tel" id="tel" /><br /> <br>
+      <input type="text" [(ngModel)]="client_in_progress.telClient" name="tel" id="tel" /><br /> <br>
      <label for="adresse">Adresse:</label>
-      <input type="adresse" name="adresse" id="adresse" />
-     <br />
+      <input type="adresse" [(ngModel)]="client_in_progress.adresseClient" name="adresse" id="adresse" />
+     <br /> <br>
+     <label for="age">Date d'aujourd'hui:</label>
+     <input type="text" [(ngModel)]="client_in_progress.dateEnregistrement" name="date" id="date" />
+    <br /> <br>
   </fieldset>
-  <fieldset>
-    <legend>Situation familiale:</legend> 
-    <p>
-     Quel est votre statut?<br />
-     <input type="radio" name="celibat" value="celibat" id="celibat" /> <label for="celibat">Célibataire</label><br />
-     <input type="radio" name="marie" value="marie" id="marie" /> <label for="marie">Marié</label><br />
-     <input type="radio" name="divorce" value="divorce" id="divorce" /> <label for="divorce">Divorcé</label><br />
-    </p>
-    <p>
-     Si vous avez des enfants, combien en avez vous? <br />
-     <input type="radio" name="deux" value="deux" id="deux" /> <label for="deux">1-2 enfants</label><br />
-     <input type="radio" name="quatre" value="quatre" id="quatre" /> <label for="quatre">3-4 enfants</label><br />
-     <input type="radio" name="cinq" value="cinq" id="cind" /> <label for="cinq">5 enfants ou plus</label><br /> </p>
-    </fieldset>
+    
+  
+<div class="input-group">
+  <input type="button" value="Nouveau Client" (click)="addUpdateClientClicked()"/>
+</div>
+
   </form>
