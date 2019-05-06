@@ -3,12 +3,12 @@ import { FraisIncompressibles } from '../../model/FraisIncompressibles';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { FraisIncompressibleServiceService } from '../../services/fraisincservice.service';
 
-@Component({
-  selector: 'app-frais-incompressible',
-  templateUrl: './frais-incompressible.component.html',
-  styleUrls: ['./frais-incompressible.component.css']
-})
-export class FraisIncompressibleComponent implements OnInit {
+// @Component({
+//   selector: 'app-frais-incompressible',
+//   templateUrl: './frais-incompressible.component.html',
+//   styleUrls: ['./frais-incompressible.component.css']
+// })
+// export class FraisIncompressibleComponent implements OnInit {
 
   frais_connu: FraisIncompressibles;
   mode_access: string;

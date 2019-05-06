@@ -14,6 +14,9 @@ import { FraisIncompressibleComponent } from './components/fraisincompressible/f
 import { NewclientComponent } from './components/newclient/newclient.component';
 import { FraisincformComponent } from './components/fraisincform/fraisincform.component';
 import { TableaufraisComponent } from './components/tableaufrais/tableaufrais.component';
+import { ClientlistComponent } from './components/clientlist/clientlist.component';
+import { ResumeclientComponent } from './components/resumeclient/resumeclient.component';
+import { ClientdetailsComponent } from './components/clientdetails/clientdetails.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { TableaufraisComponent } from './components/tableaufrais/tableaufrais.co
     FraisIncompressibleComponent,
     NewclientComponent,
     FraisincformComponent,
-    TableaufraisComponent
+    TableaufraisComponent,
+    ClientlistComponent,
+    ResumeclientComponent,
+    ClientdetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,14 +40,6 @@ import { TableaufraisComponent } from './components/tableaufrais/tableaufrais.co
     HttpClientModule,
     RouterModule.forRoot([
 
-      {
-        path: '',
-        component: Acceuil2Component
-      },
-      {
-        path: 'fraisIncompressibles',
-        component: FraisIncompressibleComponent
-      },
       {
         path: '',
         component: AcceuilComponent
@@ -55,13 +53,29 @@ import { TableaufraisComponent } from './components/tableaufrais/tableaufrais.co
         component: NewclientComponent
       },
       {
-        path: 'ajouterclient/:client_id',
-        component: NewclientComponent
+        path: 'consulter',
+        component: ClientlistComponent
       },
       {
-        path: 'fraisincform',
-        component: FraisincformComponent
+        path: 'client/:client_id',
+        component: ClientdetailsComponent
       }
+    ,
+    {
+      path: 'ajouterclient/:client_id',
+      component: NewclientComponent
+    },
+
+
+
+      // {
+      //   path: '',
+      //   component: Acceuil2Component
+      // },
+      // {
+      //   path: 'fraisIncompressibles',
+      //   component: FraisIncompressibleComponent
+      // }
     ])
   ],
   providers: [],
