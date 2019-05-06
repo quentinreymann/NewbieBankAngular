@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { AcceuilComponent } from './components/acceuil/acceuil.component';
 import { ClientComponent } from './components/client/client.component';
 import { RouterModule } from '@angular/router';
+import { Acceuil2Component } from './components/acceuil2/acceuil2.component';
+import { FraisIncompressibleComponent } from './components/fraisincompressible/frais-incompressible.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AcceuilComponent,
-    ClientComponent
+    ClientComponent,
+    Acceuil2Component,
+    FraisIncompressibleComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +24,11 @@ import { RouterModule } from '@angular/router';
 
       {
         path: '',
-        component: AcceuilComponent
+        component: Acceuil2Component
+      },
+      {
+        path: 'fraisIncompressibles',
+        component: FraisIncompressibleComponent
       }
     ])
   ],
