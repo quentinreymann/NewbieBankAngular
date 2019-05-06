@@ -1,0 +1,44 @@
+
+<h1 style="background-image:url(assets/banque.jpg)">
+  NewbieBank
+</h1>
+<h2> Formulaire d'ajout d'un nouveau client </h2><br>
+<form method="post" action="questionnaire.php">
+  <fieldset>
+    <legend>Coordonnées</legend> 
+     <label for="titre">Titre : </label>
+     <select name="titre">
+      <option value="Mme" selected="selected">Madame</option>
+      <option value="Mr">Monsieur</option>
+     </select>
+     <br /> <br>
+     <label for="nom">Nom:</label>
+      <input type="text" name="nom" id="nom" />
+     <br /> <br>
+     <label for="prenom">Prénom:</label>
+      <input type="text" name="prenom" id="prenom" />
+     <br /> <br>
+     <label for="email">Email:</label>
+      <input type="text" name="email" id="email" />
+     <br /> <br>
+     <label for="tel">Téléphone:</label>
+      <input type="text" name="tel" id="tel" /><br /> <br>
+     <label for="adresse">Adresse:</label>
+      <input type="adresse" name="adresse" id="adresse" />
+     <br />
+  </fieldset>
+  <fieldset>
+    <legend>Situation familiale:</legend> 
+    <p>
+     Quel est votre statut?<br />
+     <input type="radio" name="celibat" value="celibat" id="celibat" /> <label for="celibat">Célibataire</label><br />
+     <input type="radio" name="marie" value="marie" id="marie" /> <label for="marie">Marié</label><br />
+     <input type="radio" name="divorce" value="divorce" id="divorce" /> <label for="divorce">Divorcé</label><br />
+    </p>
+    <p>
+     Si vous avez des enfants, combien en avez vous? <br />
+     <input type="radio" name="deux" value="deux" id="deux" /> <label for="deux">1-2 enfants</label><br />
+     <input type="radio" name="quatre" value="quatre" id="quatre" /> <label for="quatre">3-4 enfants</label><br />
+     <input type="radio" name="cinq" value="cinq" id="cind" /> <label for="cinq">5 enfants ou plus</label><br /> </p>
+    </fieldset>
+  </form>

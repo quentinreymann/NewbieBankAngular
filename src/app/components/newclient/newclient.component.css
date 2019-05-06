@@ -1,0 +1,45 @@
+
+h1
+{
+  font-size: 150px;
+  text-shadow: -1px -1px rgb(238, 238, 238), 1px 1px #888, -3px 0 4px #000;
+  font-family:"Segoe print", Arial, Helvetica, sans-serif;
+  color:rgb(121, 191, 238);
+  padding:4px;
+  font-weight:lighter;
+  -moz-box-shadow: 2px 2px 6px #888;  
+  -webkit-box-shadow: 2px 2px 6px #888;  
+  box-shadow:2px 2px 6px #888;  
+  text-align:center;
+  display: block;
+  line-height:300px;
+  
+}
+h2 {
+    text-align: center
+}
+/* Police du texte tapé l'intérieur des champs et mettre une marge à gauche */ input, textarea, select {
+    font-family: "Times New Roman", Times, serif;
+    font-size:12px;
+    margin-left: 30px;
+    text-align: center
+    }
+    
+    label{
+    color: #4463f0; /* Colorer en bleu tous les labels (bah oui, pourquoi pas en bleu ?) */
+    font-weight: bold ;
+    }
+    
+    /* Mettre les titres du groupe en caractères plus grands, en gras et spécifier une couleur*/
+    legend {
+    
+    color: #4463f0; 
+    font-weight: bold;
+    font-size:24px;
+    }
+    
+    /* Mettre une séparation entre les fieldset et colorer l'arrière plan */
+    fieldset {
+    margin-bottom: 20px; 
+    background-color: rgb(216, 241, 245);
+    }
