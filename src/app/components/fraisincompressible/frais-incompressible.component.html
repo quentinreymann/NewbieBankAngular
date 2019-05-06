@@ -1,0 +1,19 @@
+<p>
+  frais-incompressible works!
+</p>
+
+<div class="form-group">
+  <label> Frais Incompressibles </label>
+  <div class="frais-incompressible" *ngFor="let frais-incompressible of frais_connu.frais-incompressible; let i = index">
+    <input type="text" class="form-control" [(ngModel)]="frais_connu.frais-incompressible[i].frais-incompressible"
+    placeholder="What to do?"/>
+    <a (click)="removeFraisIncompressibleAtIndex(i)">enlever frais</a>
+  </div>
+  <div class="add-fraisIncompressible">
+    <input type="button" value='Add' (click)="addFraisIncompressiblePressed()"/>
+  </div>
+</div>
+<div class="input-group">
+  <input type="button" value="Add ou modifier Frais Incompressibles" (click)="addUpdateFraisIncompressibleClicked()"/>
+</div>
+</div>

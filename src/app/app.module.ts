@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { AcceuilComponent } from './components/acceuil/acceuil.component';
 import { ClientComponent } from './components/client/client.component';
 import { RouterModule } from '@angular/router';
+
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { NewclientComponent } from './components/newclient/newclient.component';
+import { Acceuil2Component } from './components/acceuil2/acceuil2.component';
+import { FraisIncompressibleComponent } from './components/fraisincompressible/frais-incompressible.component';
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { NewclientComponent } from './components/newclient/newclient.component';
     AppComponent,
     AcceuilComponent,
     ClientComponent,
-    NewclientComponent,
+    Acceuil2Component,
+    FraisIncompressibleComponent
   ],
   imports: [
     BrowserModule,
@@ -27,19 +30,11 @@ import { NewclientComponent } from './components/newclient/newclient.component';
 
       {
         path: '',
-        component: AcceuilComponent
+        component: Acceuil2Component
       },
       {
-        path: 'client',
-        component: ClientComponent
-      },
-      {
-        path: 'ajouterclient',
-        component: NewclientComponent
-      },
-      {
-        path: 'ajouterclient/:client_id',
-        component: NewclientComponent
+        path: 'fraisIncompressibles',
+        component: FraisIncompressibleComponent
       }
     ])
   ],
