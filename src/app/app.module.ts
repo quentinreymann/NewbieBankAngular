@@ -12,11 +12,14 @@ import { FormsModule } from '@angular/forms';
 import { Acceuil2Component } from './components/acceuil2/acceuil2.component';
 import { FraisIncompressibleComponent } from './components/fraisincompressible/frais-incompressible.component';
 import { NewclientComponent } from './components/newclient/newclient.component';
-import { FraisincformComponent } from './components/fraisincform/fraisincform.component';
+
 import { TableaufraisComponent } from './components/tableaufrais/tableaufrais.component';
 import { ClientlistComponent } from './components/clientlist/clientlist.component';
 import { ResumeclientComponent } from './components/resumeclient/resumeclient.component';
 import { ClientdetailsComponent } from './components/clientdetails/clientdetails.component';
+import { FraisincformComponent } from './fraisincform/fraisincform.component';
+import { FraisincresumeComponent } from './components/fraisincresume/fraisincresume.component';
+
 
 
 @NgModule({
@@ -32,6 +35,7 @@ import { ClientdetailsComponent } from './components/clientdetails/clientdetails
     ClientlistComponent,
     ResumeclientComponent,
     ClientdetailsComponent,
+    FraisincresumeComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,17 +69,18 @@ import { ClientdetailsComponent } from './components/clientdetails/clientdetails
       path: 'ajouterclient/:client_id',
       component: NewclientComponent
     },
-
-
-
-      // {
-      //   path: '',
-      //   component: Acceuil2Component
-      // },
-      // {
-      //   path: 'fraisIncompressibles',
-      //   component: FraisIncompressibleComponent
-      // }
+      {
+      path: 'fraisIncompressibles',
+      component: FraisIncompressibleComponent
+      },
+      {
+        path: 'fraisincform',
+        component: FraisincformComponent
+        },
+        {
+          path: 'fraisincresume',
+          component: FraisincresumeComponent
+          }
     ])
   ],
   providers: [],

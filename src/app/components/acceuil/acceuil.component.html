@@ -8,7 +8,7 @@
       <li class="menu-clients"><a (click)="gestionclientpressed()">Gestion des Clients</a></li>
       <li class="menu-comptes"><a href="">Gestion des Comptes</a></li>
       <li class="menu-virements"><a href="">Gestion des virements</a></li>
-      <li class="menu-frais"><a href="">Gestion des Frais Incompressibles</a></li>
+      <li class="menu-frais"><a (click)="gestionfraispressed()">Gestion des Frais Incompressibles</a></li>
     </ul>
   </div>
 </nav>
@@ -17,7 +17,7 @@
   <a (click)="gestionclientpressed()"><span>Gestion des Clients</span></a>
   <a href='#'><span>Gestion des Comptes</span></a>
   <a href='#'><span>Gestion des virements</span></a>
-  <a href='#'><span>Gestion des Frais Incompressibles</span></a>
+  <a (click)="gestionfraispressed()"><span>Gestion des Frais Incompressibles</span></a>
 </div>
 <br>
 <br>

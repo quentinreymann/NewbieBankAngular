@@ -3,12 +3,12 @@ import { FraisIncompressibles } from '../../model/FraisIncompressibles';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { FraisIncompressibleServiceService } from '../../services/fraisincservice.service';
 
-// @Component({
-//   selector: 'app-frais-incompressible',
-//   templateUrl: './frais-incompressible.component.html',
-//   styleUrls: ['./frais-incompressible.component.css']
-// })
-// export class FraisIncompressibleComponent implements OnInit {
+@Component({
+selector: 'app-frais-incompressible',
+templateUrl: './frais-incompressible.component.html',
+styleUrls: ['./frais-incompressible.component.css']
+})
+export class FraisIncompressibleComponent implements OnInit {
 
   frais_connu: FraisIncompressibles;
   mode_access: string;
@@ -36,11 +36,15 @@ import { FraisIncompressibleServiceService } from '../../services/fraisincservic
       this.addFraisIncompressiblePressed(this.frais_connu);
     }
   }
+  ajouterfrais(): void {
+    this.router.navigateByUrl('/fraisincform');
+  }
+  
 
   public removeFraisIncompressiblePressed(): void {
     this.fraisincservice.deleteFraisIncompressibles(this.frais_connu).subscribe(
       (response) => {
-        this.router.navigateByUrl('/fraisincompressible');
+        this.router.navigateByUrl('/fraisincresume');
       }
     );
   }

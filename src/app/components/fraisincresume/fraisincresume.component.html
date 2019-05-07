@@ -1,0 +1,16 @@
+<p>
+  fraisincresume works!
+</p>
+
+<div (click)="userClicked()">
+<app-tableaufrais
+    *ngFor="let frais of fraisIncompressibles" [fraisIncompressible]="frais" (userClick)="userClickedOnFrais($event)"></app-tableaufrais>  
+  </div>  
+<br/>
+<div >
+  <a (click)="editButtonPressed()" style='cursor: pointer'>Modifier un Frais Incompressible </a></div>
+<br/>
+  
+<div>
+          <a (click)="deleteButtonPressed()" style='cursor: pointer'>Supprimer un Frais Incompressible</a>
+        </div> 

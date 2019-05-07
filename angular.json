@@ -24,6 +24,7 @@
             ],
             "styles": [
               "src/styles.css",
+              "src/bs/css/bootstrap.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true

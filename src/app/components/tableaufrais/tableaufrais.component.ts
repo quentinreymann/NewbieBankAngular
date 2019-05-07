@@ -16,8 +16,6 @@ export class TableaufraisComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('zzzzzzz')
-    console.log(this.fraisIncompressible)
 
   }
 

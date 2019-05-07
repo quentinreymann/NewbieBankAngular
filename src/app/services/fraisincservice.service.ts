@@ -21,7 +21,7 @@ export class FraisIncompressibleServiceService {
   }
 
   public deleteFraisIncompressibles(fraisincompressible: FraisIncompressibles): Observable<any> {
-    return this.http.delete<FraisIncompressibles>(FRAIS_SERVER + '/fraisincompressibles/' + fraisincompressible.idFraisIncompressible,
+    return this.http.delete<FraisIncompressibles>(FRAIS_SERVER + '/fraisincompressibles/' + fraisincompressible.idFraisIncompressibles,
      this.httpOptions);
   }
 
@@ -35,7 +35,7 @@ export class FraisIncompressibleServiceService {
   }
 
   public updateFraisIncompressible(fraisincompressible: FraisIncompressibles): Observable<any> {
-    return this.http.put<FraisIncompressibles>(FRAIS_SERVER + '/fraisincompressibles/' + fraisincompressible.idFraisIncompressible,
+    return this.http.put<FraisIncompressibles>(FRAIS_SERVER + '/fraisincompressibles/' + fraisincompressible.idFraisIncompressibles,
       JSON.stringify(fraisincompressible), this.httpOptions);
   }
 }
