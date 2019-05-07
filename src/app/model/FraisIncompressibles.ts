@@ -1,14 +1,18 @@
 import { Compte } from './Compte';
 export class FraisIncompressibles {
-    public idFraisIncompressible: number;
+    public idFraisIncompressibles: number;
     public nomFrais: string;
-    public montantFrais: DoubleRange;
-    public compteBancaire: Compte;
+    public montantFrais: number;
+    public compte: Compte;
 
-    constructor(id: number, nom: string, montant: DoubleRange, compte: Compte) {
-        this.idFraisIncompressible = id;
+    constructor(id: number, nom: string, montant: number, compte: Compte) {
+        this.idFraisIncompressibles = id;
         this.nomFrais = nom;
         this.montantFrais = montant;
-        this.compteBancaire = compte;
+        this.compte = compte;
+        }
+
+    public static createBlank(): FraisIncompressibles {
+            return new FraisIncompressibles(-1, '', 1, null);
         }
 }

@@ -31,7 +31,7 @@ export class ClientlistComponent implements OnInit {
     });
   }
 
-  userClickedOnClient(client_id): void {
+  public userClickedOnClient(client_id: number): void {
     this.router.navigateByUrl('/client/' + client_id);
   }
 

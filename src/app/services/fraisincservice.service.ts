@@ -17,25 +17,25 @@ export class FraisIncompressibleServiceService {
   constructor(private http: HttpClient) { }
 
   public getAllfraisIncompressibles(): Observable<any> {
-    return this.http.get<FraisIncompressibles>(FRAIS_SERVER + '/fraisincompressible/all');
+    return this.http.get<FraisIncompressibles>(FRAIS_SERVER + '/fraisincompressibles/all');
   }
 
   public deleteFraisIncompressibles(fraisincompressible: FraisIncompressibles): Observable<any> {
-    return this.http.delete<FraisIncompressibles>(FRAIS_SERVER + '/fraisincompressible/' + fraisincompressible.idFraisIncompressible,
+    return this.http.delete<FraisIncompressibles>(FRAIS_SERVER + '/fraisincompressibles/' + fraisincompressible.idFraisIncompressibles,
      this.httpOptions);
   }
 
   public getById(id: number): Observable<any> {
-    return this.http.get<FraisIncompressibles>(FRAIS_SERVER + '/fraisincompressible/findById/' + id);
+    return this.http.get<FraisIncompressibles>(FRAIS_SERVER + '/fraisincompressibles/findById/' + id);
   }
 
   public saveFraisIncompressible(fraisincompressible: FraisIncompressibles): Observable<any> {
-    return this.http.post<FraisIncompressibles>(FRAIS_SERVER + '/fraisincompressible//ajouterFraisIncompressibles',
+    return this.http.post<FraisIncompressibles>(FRAIS_SERVER + '/fraisincompressibles/ajouterFraisIncompressibles',
       JSON.stringify(fraisincompressible), this.httpOptions);
   }
 
   public updateFraisIncompressible(fraisincompressible: FraisIncompressibles): Observable<any> {
-    return this.http.put<FraisIncompressibles>(FRAIS_SERVER + '/fraisincompressible/' + fraisincompressible.idFraisIncompressible,
+    return this.http.put<FraisIncompressibles>(FRAIS_SERVER + '/fraisincompressibles/' + fraisincompressible.idFraisIncompressibles,
       JSON.stringify(fraisincompressible), this.httpOptions);
   }
 }

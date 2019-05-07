@@ -23,7 +23,7 @@ export class ClientComponent implements OnInit {
 
 
 acceuil(): void {
-  this.router.navigateByUrl('/client');
+  this.router.navigateByUrl('');
 }
 
 ajouterclient(): void {

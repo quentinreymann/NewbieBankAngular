@@ -13,14 +13,18 @@ export class AcceuilComponent implements OnInit {
   mode_access: string;
   client_in_progress: Client;
 
-  constructor(private router: Router, private clientService: ClientServiceService) { 
-    
+  constructor(private router: Router, private clientService: ClientServiceService) {
+
   }
 
   gestionclientpressed(): void {
     this.router.navigateByUrl('/client');
   }
-  
+
+  gestionfraispressed(): void {
+    this.router.navigateByUrl('/fraisIncompressibles');
+  }
+
  ngOnInit(): void {
 
  }

@@ -1,71 +1,66 @@
-// import { Component, OnInit } from '@angular/core';
-// import { FraisIncompressibles } from '../../model/FraisIncompressibles';
-// import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { FraisIncompressibles } from '../../model/FraisIncompressibles';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { FraisIncompressibleServiceService } from '../../services/fraisincservice.service';
 
-// @Component({
-//   selector: 'app-frais-incompressible',
-//   templateUrl: './frais-incompressible.component.html',
-//   styleUrls: ['./frais-incompressible.component.css']
-// })
-// export class FraisIncompressibleComponent implements OnInit {
+@Component({
+selector: 'app-frais-incompressible',
+templateUrl: './frais-incompressible.component.html',
+styleUrls: ['./frais-incompressible.component.css']
+})
+export class FraisIncompressibleComponent implements OnInit {
 
-//   frais_connu: FraisIncompressibles;
-//   mode_access: string;
+  frais_connu: FraisIncompressibles;
+  mode_access: string;
+ 
+  fraisIncompressible: FraisIncompressibles;
+  fraisIncompressibles: FraisIncompressibles[];
 
-// //   constructor( private router: Router, private route: ActivatedRoute, private FraisIncService: FraisIncServiceService) {
-// //     this.frais_connu = FraisIncompressibles.createBlank();
-// //     console.log(this.frais_connu);
-// //    }
+  constructor( private router: Router, private route: ActivatedRoute, private fraisincservice: FraisIncompressibleServiceService) {
+    this.frais_connu = FraisIncompressibles.createBlank();
+    console.log(this.frais_connu);
 
-// //    ngOnInit(): void {
-// //     this.route.paramMap.subscribe((params: ParamMap => {
-// //       if (params.get('idFraisIncompressible') != null) {
-// //         console.log(params.get('idFraisIncompressible'));
-// //         this.mode_access = 'MODIFICATION';
-// //         this.FraisIncService.getRecipeById(parseInt(params.get('idFraisIncompressible'), 10)).subscribe(
-// //           (response) => {
-// //             this.frais_connu = response;
-// //           }
-// //         );
-// //       } else {
-// //         this.mode_access = 'AJOUT';
-// //         console.log('Good');
-// //       }
-// //     });
-// //   }
-// //   addFraisIncompressiblePressed(): void {
-// //     if (!this.frais_connu.FraisIncompressibles) {
-// //       this.this.frais_connu.FraisIncompressibles = [ { ingredient: null, measure: null }];
+   }
 
-// //     } else {
-// //       this.frais_connu.FraisIncompressibles.push({ ingredient: null, measure: null});
-// //     }
-// //   }
+   ngOnInit(): void {
+    this.fraisincservice.getAllfraisIncompressibles().subscribe((response) => {
+      this.fraisIncompressibles = response;
+    });
+  }
 
 
-// //   removeFraisIncompressibleAtIndex(index): void {
-// //     this.frais_connu.FraisIncompressibles.splice(index, 1);
-// //   }
+   public addUpdateFraisIncClicked(): void {
+    if (this.mode_access === 'MODIFICATION') {
+      this.updateFraisInc(this.frais_connu);
+    } else {
+      this.addFraisIncompressiblePressed(this.frais_connu);
+    }
+  }
+  ajouterfrais(): void {
+    this.router.navigateByUrl('/fraisincform');
+  }
+  
 
-// //   public UpdateFraisIncompressibleClicked(FraisIncompressibles: FraisIncompressibles): void {
-// //     this.FraisIncService.UpdateFraisIncompressibleClicked(this.frais_connu).subscribe(
-// //       (response) => {
-// //         this.router.navigateByUrl('/fraisincform');
-// //       }
-// //     );
-// //   }
-// //   public addFraisIncompressible(FraisIncompressibles: FraisIncompressibles): void {
-// //     this.FraisIncService.createFraisIncompressible(this.frais_connu).subscribe(
-// //       (response) => {
-// //         this.router.navigateByUrl('/fraisincform');
-// //       }
-// //     );
-// //   }
-// //   public addUpdateFraisIncompressibleClicked(): void {
-// //     if (this.mode_access === 'MODIFICATION') {
-// //       this.updateFraisIncompressible(this.frais_connu);
-// //     } else {
-// //       this.addFraisIncompressible(this.frais_connu);
-// //     }
-// //   }
-// // }
+  public removeFraisIncompressiblePressed(): void {
+    this.fraisincservice.deleteFraisIncompressibles(this.frais_connu).subscribe(
+      (response) => {
+        this.router.navigateByUrl('/fraisincresume');
+      }
+    );
+  }
+
+  public addFraisIncompressiblePressed(FraisIncompressibles: FraisIncompressibles): void {
+    this.fraisincservice.saveFraisIncompressible(this.frais_connu).subscribe(
+      (response) => {
+        this.router.navigateByUrl('/fraisincform');
+      }
+    );
+  }
+  public updateFraisInc(FraisIncompressibles: FraisIncompressibles): void {
+    this.fraisincservice.updateFraisIncompressible(this.frais_connu).subscribe(
+    (response) => {
+      this.router.navigateByUrl('/fraisincform');
+    }
+  );
+}
+}

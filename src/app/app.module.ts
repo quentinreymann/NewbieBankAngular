@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,31 +10,36 @@ import { RouterModule } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-// import { Acceuil2Component } from './components/acceuil2/acceuil2.component';
-// import { FraisIncompressibleComponent } from './components/fraisincompressible/frais-incompressible.component';
+import { Acceuil2Component } from './components/acceuil2/acceuil2.component';
+import { FraisIncompressibleComponent } from './components/fraisincompressible/frais-incompressible.component';
 import { NewclientComponent } from './components/newclient/newclient.component';
+
+import { TableaufraisComponent } from './components/tableaufrais/tableaufrais.component';
 import { ClientlistComponent } from './components/clientlist/clientlist.component';
 import { ResumeclientComponent } from './components/resumeclient/resumeclient.component';
 import { ClientdetailsComponent } from './components/clientdetails/clientdetails.component';
-
-
+import { FraisincresumeComponent } from './components/fraisincresume/fraisincresume.component';
+import { FraisincformComponent } from './components/fraisincform/fraisincform.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AcceuilComponent,
     ClientComponent,
+    Acceuil2Component,
+    FraisIncompressibleComponent,
     NewclientComponent,
+    FraisincformComponent,
+    TableaufraisComponent,
     ClientlistComponent,
     ResumeclientComponent,
     ClientdetailsComponent,
-
-    // Acceuil2Component,
-   // FraisIncompressibleComponent
+    FraisincresumeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
@@ -63,17 +69,18 @@ import { ClientdetailsComponent } from './components/clientdetails/clientdetails
       path: 'ajouterclient/:client_id',
       component: NewclientComponent
     },
-
-
-
-      // {
-      //   path: '',
-      //   component: Acceuil2Component
-      // },
-      // {
-      //   path: 'fraisIncompressibles',
-      //   component: FraisIncompressibleComponent
-      // }
+      {
+      path: 'fraisIncompressibles',
+      component: FraisIncompressibleComponent
+      },
+      {
+        path: 'fraisincform',
+        component: FraisincformComponent
+        },
+        {
+          path: 'fraisincresume',
+          component: FraisincresumeComponent
+          }
     ])
   ],
   providers: [],
