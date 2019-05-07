@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import {ButtonModule} from 'primeng/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,8 +17,7 @@ import { NewclientComponent } from './components/newclient/newclient.component';
 import { ClientlistComponent } from './components/clientlist/clientlist.component';
 import { ResumeclientComponent } from './components/resumeclient/resumeclient.component';
 import { ClientdetailsComponent } from './components/clientdetails/clientdetails.component';
-
-
+import {ToastModule} from 'primeng/toast';
 
 @NgModule({
   declarations: [
@@ -27,13 +28,17 @@ import { ClientdetailsComponent } from './components/clientdetails/clientdetails
     ClientlistComponent,
     ResumeclientComponent,
     ClientdetailsComponent,
+    
 
     // Acceuil2Component,
    // FraisIncompressibleComponent
   ],
   imports: [
     BrowserModule,
+    ToastModule,
+    ButtonModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
