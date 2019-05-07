@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,10 +18,8 @@ import { TableaufraisComponent } from './components/tableaufrais/tableaufrais.co
 import { ClientlistComponent } from './components/clientlist/clientlist.component';
 import { ResumeclientComponent } from './components/resumeclient/resumeclient.component';
 import { ClientdetailsComponent } from './components/clientdetails/clientdetails.component';
-import { FraisincformComponent } from './fraisincform/fraisincform.component';
 import { FraisincresumeComponent } from './components/fraisincresume/fraisincresume.component';
-
-
+import { FraisincformComponent } from './components/fraisincform/fraisincform.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +39,7 @@ import { FraisincresumeComponent } from './components/fraisincresume/fraisincres
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([

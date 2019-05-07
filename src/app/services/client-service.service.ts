@@ -34,7 +34,7 @@ export class ClientServiceService {
     return this.http.post<Client>(RECIPE_SERVER + '/client/ajouterClient', JSON.stringify(client), this.httpOptions);
   }
 
-  public updateRecipe(client: Client): Observable<any> {
+  public updateClient(client: Client): Observable<any> {
     return this.http.put<Client>(RECIPE_SERVER + '/client/' + client.id, JSON.stringify(client), this.httpOptions);
   }
 }
