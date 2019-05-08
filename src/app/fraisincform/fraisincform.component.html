@@ -1,6 +1,7 @@
 <p>
   fraisincform works!
 </p>
+
 <form method="post" action="questionnaire.php">
   <fieldset>
     <legend>Entrez votre frais incompressible</legend> 
@@ -16,7 +17,9 @@
      <label for="tel">Compte du prélèvement:</label>
       <input type="text" [(ngModel)]="frais_in_progress.compteBancaire" name="compteBancaire" id="compteBancaire" />
   </fieldset>
-<div class="input-group">
+  <div class="input-group">
   <input type="button" value="Nouveau Frais" (click)="addUpdateFraisClicked()"/>
-</div>
-  </form>
+  </div>
+</form>
+
+

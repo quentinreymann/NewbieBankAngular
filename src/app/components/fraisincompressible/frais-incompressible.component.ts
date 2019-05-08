@@ -10,9 +10,11 @@ styleUrls: ['./frais-incompressible.component.css']
 })
 export class FraisIncompressibleComponent implements OnInit {
 
+  // tslint:disable-next-line:variable-name
   frais_connu: FraisIncompressibles;
+  // tslint:disable-next-line:variable-name
   mode_access: string;
- 
+
   fraisIncompressible: FraisIncompressibles;
   fraisIncompressibles: FraisIncompressibles[];
 
@@ -39,7 +41,7 @@ export class FraisIncompressibleComponent implements OnInit {
   ajouterfrais(): void {
     this.router.navigateByUrl('/fraisincform');
   }
-  
+
 
   public removeFraisIncompressiblePressed(): void {
     this.fraisincservice.deleteFraisIncompressibles(this.frais_connu).subscribe(
@@ -49,14 +51,14 @@ export class FraisIncompressibleComponent implements OnInit {
     );
   }
 
-  public addFraisIncompressiblePressed(FraisIncompressibles: FraisIncompressibles): void {
+  public addFraisIncompressiblePressed(FraisIncompressible: FraisIncompressibles): void {
     this.fraisincservice.saveFraisIncompressible(this.frais_connu).subscribe(
       (response) => {
         this.router.navigateByUrl('/fraisincform');
       }
     );
   }
-  public updateFraisInc(FraisIncompressibles: FraisIncompressibles): void {
+  public updateFraisInc(FraisIncompressible: FraisIncompressibles): void {
     this.fraisincservice.updateFraisIncompressible(this.frais_connu).subscribe(
     (response) => {
       this.router.navigateByUrl('/fraisincform');

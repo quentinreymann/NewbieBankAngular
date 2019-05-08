@@ -20,6 +20,8 @@ import { ResumeclientComponent } from './components/resumeclient/resumeclient.co
 import { ClientdetailsComponent } from './components/clientdetails/clientdetails.component';
 import { FraisincresumeComponent } from './components/fraisincresume/fraisincresume.component';
 import { FraisincformComponent } from './components/fraisincform/fraisincform.component';
+import { ButtonModule } from 'primeng/button';
+
 
 @NgModule({
   declarations: [
@@ -42,6 +44,7 @@ import { FraisincformComponent } from './components/fraisincform/fraisincform.co
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    ButtonModule,
     RouterModule.forRoot([
 
       {
