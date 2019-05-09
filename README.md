@@ -41,7 +41,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-# Installing
+## Installing
 To install the project use the next command:
 
 $ ng install
@@ -50,7 +50,7 @@ To install files to import
 
 $ npm install
 
-# Running
+## Running
 To run the project load the file with open folder and select it.
 
 ## Further help
@@ -59,9 +59,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # Technologies
 
-Angular
-PrimeNg
-Bootstrap
+*Angular
+*PrimeNg
+*Bootstrap
 
 
 # Authors
