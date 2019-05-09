@@ -46,6 +46,10 @@ To install the project use the next command:
 
 $ ng install
 
+To install files to import
+
+$ npm install
+
 # Running
 To run the project load the file with open folder and select it.
 
