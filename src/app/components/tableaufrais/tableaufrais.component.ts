@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FraisIncompressibles } from '../../model/FraisIncompressibles';
+
 
 
 
@@ -13,7 +14,17 @@ export class TableaufraisComponent implements OnInit {
   @Input()
   fraisIncompressible: FraisIncompressibles;
 
+  @Output()
+  userClick: EventEmitter<number> = new EventEmitter();
+
   constructor() { }
+
+  userClicked() {
+    console.log('taraaaaaa');
+    console.log(this.fraisIncompressible);
+    this.userClick.emit(this.fraisIncompressible.idFraisIncompressibles);
+
+  }
 
   ngOnInit() {
 

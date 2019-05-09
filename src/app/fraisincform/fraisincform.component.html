@@ -1,25 +1,34 @@
-<p>
-  fraisincform works!
-</p>
+<h1 style="background-image:url(assets/banque.jpg)">
+  NewbieBank
+</h1>
+<br/><br/>
+<h2>
+  Votre frais incompressible
+</h2>
+<br/><br/>
 
-<form method="post" action="questionnaire.php">
+<form  method="post" action="questionnaire.php">
   <fieldset>
     <legend>Entrez votre frais incompressible</legend> 
+    <br/><br/>
      <label for="id">Id:</label>
       <input type="text" [(ngModel)]="frais_in_progress.idFraisIncompressible" name="idFraisIncompressible" id="id" />
-     <br /> <br>
+      <br/><br/>
      <label for="nom">Destination:</label>
       <input type="text" [(ngModel)]="frais_in_progress.nomFrais" name="nomFrais" id="nomFrais" />
-     <br /> <br>
+     <br/><br/>
      <label for="montant">Montant:</label>
      <input type="text" [(ngModel)]="frais_in_progress.montantFrais" name="montant" id="montant" />
-    <br /> <br>
+    <br/><br/>
      <label for="tel">Compte du prélèvement:</label>
       <input type="text" [(ngModel)]="frais_in_progress.compteBancaire" name="compteBancaire" id="compteBancaire" />
+      <br/><br/>
   </fieldset>
+  <br/><br/>
   <div class="input-group">
-  <input type="button" value="Nouveau Frais" (click)="addUpdateFraisClicked()"/>
+  <input style="text-align:center" type="button" value="Nouveau Frais" (click)="addUpdateFraisClicked()"/>
   </div>
 </form>
+
 
 

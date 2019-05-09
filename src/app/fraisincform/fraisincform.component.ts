@@ -22,10 +22,10 @@ console.log(this.frais_in_progress);
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
-      if (params.get('fraisIncompressible_id') != null) {
-        console.log(params.get('fraisIncompressible_id'));
+      if (params.get('frais_id') != null) {
+        console.log(params.get('frais_id'));
         this.mode_access = 'MODIFICATION';
-        this.FraisIncompressibleServiceService.getById(parseInt(params.get('fraisIncompressible_id'), 10))
+        this.FraisIncompressibleServiceService.getById(parseInt(params.get('frais_id'), 10))
         .subscribe(
           (response) => {
             this.frais_in_progress = response;
@@ -39,7 +39,6 @@ console.log(this.frais_in_progress);
   }
 
   public addUpdateFraisClicked(): void {
-    console.log(this.frais_in_progress);
     if (this.mode_access === 'MODIFICATION') {
       this.updateFraisIncompressible(this.frais_in_progress);
     } else {
@@ -50,7 +49,7 @@ console.log(this.frais_in_progress);
   public updateFraisIncompressible(fraisIncompressible: FraisIncompressibles): void {
     this.FraisIncompressibleServiceService.updateFraisIncompressible(this.frais_in_progress).subscribe(
       (response) => {
-        this.router.navigateByUrl('/fraisIncompressibles');
+        this.router.navigateByUrl('/frais-Incompressible');
       }
     );
   }
@@ -58,7 +57,7 @@ console.log(this.frais_in_progress);
   public saveFraisIncompressible(fraisIncompressible: FraisIncompressibles): void {
     this.FraisIncompressibleServiceService.saveFraisIncompressible(this.frais_in_progress).subscribe(
       (response) => {
-        this.router.navigateByUrl('/fraisIncompressibles');
+        this.router.navigateByUrl('/frais-Incompressible');
       }
     );
   }

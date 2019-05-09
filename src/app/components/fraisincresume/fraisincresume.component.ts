@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FraisIncompressibles } from '../../model/FraisIncompressibles';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { FraisIncompressibleServiceService } from '../../services/fraisincservice.service';
 
 @Component({
@@ -10,41 +10,45 @@ import { FraisIncompressibleServiceService } from '../../services/fraisincservic
 })
 export class FraisincresumeComponent implements OnInit {
 
-
-  
-
-  frais_connu: FraisIncompressibles;
   fraisIncompressible: FraisIncompressibles;
   fraisIncompressibles: FraisIncompressibles[];
 
-  constructor( private router: Router, private route: ActivatedRoute, private fraisincservice: FraisIncompressibleServiceService) {
-    this.frais_connu = FraisIncompressibles.createBlank();
-    console.log(this.frais_connu);
+  constructor( private router: Router, private route: ActivatedRoute, private fraisincservice: FraisIncompressibleServiceService) {}
 
-   }
 
-   ngOnInit(): void {
-    this.fraisincservice.getAllfraisIncompressibles().subscribe((response) => {
-      this.fraisIncompressibles = response;
+  ngOnInit(): void {
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      this.getFraisById(parseInt(params.get('frais_id'), 10));
+      console.log(this.fraisIncompressible)
     });
+  }
 
-//userClicked() {
- // this.userClicke.emit(this.fraisincompressible.idFraisIncompressible);
+  findFraisById(id: number): FraisIncompressibles {
+    for (const fraisIncompressible of this.fraisIncompressibles) {
+      if (fraisIncompressible.idFraisIncompressibles === id) {
+        return fraisIncompressible;
+      }
+    }
+    return null;
   }
 
 public editButtonPressed(): void {
-this.router.navigateByUrl('/fraisincform' + this.fraisIncompressible.idFraisIncompressibles);
+this.router.navigateByUrl('/fraisincform/' + this.fraisIncompressible.idFraisIncompressibles);
+console.log('reach');
 }
 
 public deleteButtonPressed(): void {
 this.fraisincservice.deleteFraisIncompressibles(this.fraisIncompressible).subscribe(
  (response) => {
-   this.router.navigateByUrl('/fraisIncompressibles');
+   this.router.navigateByUrl('/frais-Incompressible');
   }
   );
 }
-public userClickedOnFrais(idFraisIncompressibles: number): void {
-  this.router.navigateByUrl('/fraisIncompressibles' + idFraisIncompressibles);
+public getFraisById(id: number): void {
+  this.fraisincservice.getById(id).subscribe((response) => {
+    this.fraisIncompressible = response;
+    console.log(this.fraisIncompressible);
+  });
 }
 }
 

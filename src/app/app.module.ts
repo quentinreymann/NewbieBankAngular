@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Acceuil2Component } from './components/acceuil2/acceuil2.component';
-import { FraisIncompressibleComponent } from './components/fraisincompressible/frais-incompressible.component';
+
 import { NewclientComponent } from './components/newclient/newclient.component';
 
 import { TableaufraisComponent } from './components/tableaufrais/tableaufrais.component';
@@ -19,8 +19,11 @@ import { ClientlistComponent } from './components/clientlist/clientlist.componen
 import { ResumeclientComponent } from './components/resumeclient/resumeclient.component';
 import { ClientdetailsComponent } from './components/clientdetails/clientdetails.component';
 import { FraisincresumeComponent } from './components/fraisincresume/fraisincresume.component';
-import { FraisincformComponent } from './components/fraisincform/fraisincform.component';
 import { ButtonModule } from 'primeng/button';
+import { FraisincformComponent } from './fraisincform/fraisincform.component';
+import { FraisIncompressibleComponent } from './components/frais-incompressible/frais-incompressible.component';
+
+
 
 
 @NgModule({
@@ -68,22 +71,26 @@ import { ButtonModule } from 'primeng/button';
         component: ClientdetailsComponent
       }
     ,
-    {
+      {
       path: 'ajouterclient/:client_id',
       component: NewclientComponent
-    },
+      },
       {
-      path: 'fraisIncompressibles',
+      path: 'frais-Incompressible',
       component: FraisIncompressibleComponent
       },
       {
         path: 'fraisincform',
         component: FraisincformComponent
-        },
-        {
-          path: 'fraisincresume',
+      },
+      {
+          path: 'frais-Incompressible/:frais_id',
           component: FraisincresumeComponent
-          }
+      },
+      {
+        path: 'fraisincform/:frais_id',
+        component: FraisincformComponent
+      }
     ])
   ],
   providers: [],

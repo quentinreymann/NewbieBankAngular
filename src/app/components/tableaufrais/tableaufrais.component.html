@@ -1,10 +1,9 @@
-<table>
-<div>
-    <br/>
-    <tr><div>id du frais: {{ fraisIncompressible.idFraisIncompressibles }} </div></tr>
-    <tr><div>nom: {{ fraisIncompressible.nomFrais }} </div></tr>
-    <tr><div>montant: {{ fraisIncompressible.montantFrais }} </div></tr>
-    <br/>
-    
+<div class='frais panel panl-default' (click)="userClicked()">
+    <div id="col1" classe="panel-heading">
+        <h3 class="panel-title" click="userClicked()">{{ fraisIncompressible.nomFrais }}</h3>
+    </div> 
+    &nbsp; &nbsp; &nbsp; &nbsp; <div id="col2" class="panel-body" click="userClicked()">
+        <p style="color:antiquewhite">Prélèvement: {{ fraisIncompressible.montantFrais }} €/mois</p>
+    </div>    
 </div>
-</table>
+

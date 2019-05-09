@@ -17,22 +17,18 @@ h1
 
 h2{
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+h3{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  
 }
 
-label
-{
-	display: block;
-	width: 150px;
-  float: left;
-  margin-left: 700px;
-
-}
-
-form{
-  text-align: center; 
-}
-
-input {
-  margin-right: 400px;
+#button{
+  text-align: center;
+  background-color:rgb(121, 191, 238);
+  font-family: 'Times New Roman', Times, serif;
 }
 
