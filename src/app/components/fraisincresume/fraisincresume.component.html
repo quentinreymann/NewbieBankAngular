@@ -3,21 +3,22 @@
 </h1>
 <br/><br/>
 <h2>Gestion des frais incompressibles</h2>
+<br/><br/>
 
-<div class='recipe panel panel-default'>
+<div id="bob" class='recipe panel panel-default'>
     <div class="panel-heading">
       <h3 class="panel-title">{{ fraisIncompressible.nomFrais }}</h3>
     </div>
+    <br/>
     <div class="panel-body">
         <p>id du frais: {{ fraisIncompressible.idFraisIncompressibles }} </p>
         <p>montant: {{ fraisIncompressible.montantFrais }}</p>
         <p>compte lié: {{ fraisIncompressible.compte }}</p>
-    </div>    
+    </div> 
+</div>   
 <br/>
-<div >
-  <a (click)="editButtonPressed()" style='cursor: pointer'>Modifier un Frais Incompressible </a></div>
-<br/>
-  
-<div>
-  <a (click)="deleteButtonPressed()" style='cursor: pointer'>Supprimer un Frais Incompressible</a>
-</div> 
+<div style="text-align:center"><button pButton type="button" label="Modifier un Frais Incompressible" (click)="editButtonPressed()"></button>
+</div>
+<br/><br/>
+<div style="text-align:center"><button pButton type="button" label="Supprimer un Frais Incompressible" (click)="deleteButtonPressed()"></button>
+</div>

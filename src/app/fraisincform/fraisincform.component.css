@@ -12,11 +12,12 @@ h1
   text-align:center;
   display: block;
   line-height:300px;
-  
 }
 
 h2{
     text-align: center;
+    text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 label
@@ -25,14 +26,24 @@ label
 	width: 150px;
   float: left;
   margin-left: 700px;
+  font-family: 'Times New Roman', Times, serif;
 
 }
 
 form{
   text-align: center; 
+  color:rgb(121, 191, 238);
+  font-family: 'Times New Roman', Times, serif;
 }
 
 input {
   margin-right: 400px;
+  background-color:rgb(121, 191, 238);
+  font-family: 'Times New Roman', Times, serif;
 }
 
+#but {
+  text-align: center;
+  margin-left: 900px;
+  font-family: 'Times New Roman', Times, serif;
+}
