@@ -22,7 +22,7 @@ export class AcceuilComponent implements OnInit {
   }
 
   gestionfraispressed(): void {
-    this.router.navigateByUrl('/fraisIncompressibles');
+    this.router.navigateByUrl('/frais-Incompressible');
   }
 
   contactpressed(): void {

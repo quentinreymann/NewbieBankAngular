@@ -17,11 +17,20 @@ h1
 
 h2{
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
     text-decoration: underline;
+    
+}
+h3{
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color:rgb(121, 191, 238);
+  
 }
 
-#bob{
-  text-align: center; 
-  color:rgb(121, 191, 238);
+#button{
+  text-align: center;
+  background-color:rgb(121, 191, 238);
   font-family: 'Times New Roman', Times, serif;
 }
+

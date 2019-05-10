@@ -1,0 +1,13 @@
+#col1 {
+    float: left;
+    margin-left:650px;
+    width:240px;
+    background-color: rgb(121, 191, 238);
+    padding: 10px;
+  }
+#col2 {
+    margin-left:750px;
+    margin-right:750px;
+    padding: 10px;
+    background-color:rgb(37, 152, 228);
+}

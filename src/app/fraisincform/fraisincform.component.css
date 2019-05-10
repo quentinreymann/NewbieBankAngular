@@ -1,0 +1,51 @@
+h1
+{
+  font-size: 150px;
+  text-shadow: -1px -1px rgb(238, 238, 238), 1px 1px #888, -3px 0 4px #000;
+  font-family:"Segoe print", Arial, Helvetica, sans-serif;
+  color:rgb(121, 191, 238);
+  padding:4px;
+  font-weight:lighter;
+  -moz-box-shadow: 2px 2px 6px #888;  
+  -webkit-box-shadow: 2px 2px 6px #888;  
+  box-shadow:2px 2px 6px #888;  
+  text-align:center;
+  display: block;
+  line-height:300px;
+}
+
+h2{
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+label
+{
+	display: block;
+	width: 150px;
+  float: left;
+  margin-left: 700px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+
+}
+
+form{
+  text-align: center; 
+  color:rgb(121, 191, 238);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+input {
+  margin-right: 400px;
+  background-color:rgb(121, 191, 238);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+#but {
+  text-align: center;
+  margin-left: 900px;
+  font-family: 'Times New Roman', Times, serif;
+}
