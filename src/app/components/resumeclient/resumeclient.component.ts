@@ -3,7 +3,7 @@ import { Client } from 'src/app/model/Client';
 import { EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { ClientServiceService } from 'src/app/services/client-service.service';
-
+import {ButtonModule} from 'primeng/button';
 @Component({
   selector: 'app-resumeclient',
   templateUrl: './resumeclient.component.html',

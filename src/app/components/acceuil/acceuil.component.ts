@@ -25,6 +25,14 @@ export class AcceuilComponent implements OnInit {
     this.router.navigateByUrl('/fraisIncompressibles');
   }
 
+  contactpressed(): void {
+    this.router.navigateByUrl('/contact');
+  }
+
+  gestionComptepressed(): void {
+    this.router.navigateByUrl('/compte');
+  }
+
  ngOnInit(): void {
 
  }

@@ -1,0 +1,44 @@
+
+<h1 style="background-image:url(assets/banque.jpg)">
+  NewbieBank
+</h1>
+<br> <br>
+<h2> Formulaire d'ajout d'un compte bancaire </h2><br> <br>
+<form method="post" action="questionnaire.php">
+  <fieldset>
+ 
+    <table>
+      <tr>
+    <td><label for="code">Code du compte:</label></td>
+    <td><input type="text" [(ngModel)]="compte_in_progress.codeCompte" name="code" id="code" /></td>
+    <br /> <br> </tr>
+    <tr>
+     <td><label for="date">Date de création:</label></td>
+      <td><input type="date" value="2019-07-22" min="2019-01-01" max="2019-12-31" [(ngModel)]="compte_in_progress.dateCreation" /></td>
+     <br /> <br> </tr>
+     <tr>
+    <td><label for="solde">Solde du compte:</label></td> 
+     <td><input type="text" [(ngModel)]="compte_in_progress.solde" name="solde" id="solde" /></td> 
+     <br /> <br> </tr>
+     <tr>
+    <td> <label for="decouv">Découvert autorisé:</label> </td>
+    <td> <input type="text" [(ngModel)]="compte_in_progress.decouvert" name="decouv" id="decouv" /> </td>
+    <br /> <br> </tr>
+    <tr>
+    <td> <label for="plafond">Plafond autorisé:</label></td>
+     <td><input type="text" [(ngModel)]="compte_in_progress.plafond" name="plafond" id="plafond" /></td>
+      <br /> <br> </tr>
+      <tr>
+    <td> <label for="code">id client:</label></td>
+    <td> <input type="adresse" [(ngModel)]="compte_in_progress.idclient" name="adresse" id="adresse" /></td>
+     <br /> <br> </tr>
+    </table>
+  </fieldset>
+  
+  
+<div id="button">
+      <button pButton type="button" (click)="addUpdateCompteClicked()" label="Ajouter un Compte" class="ui-button-rounded ui-button-secondary"></button>
+    </div>
+      </form>
+
+

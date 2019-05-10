@@ -15,6 +15,13 @@ h1
   line-height:300px;
   
 }
+
+img {
+  float: right;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+}
 .ca-menu li:hover{
     border-color: #333;
     z-index: 999;
@@ -22,7 +29,7 @@ h1
 }
 .ca-menu li:hover .ca-icon{
     color: #000;
-    font-size: 60px;
+    font-size: 100px;
     text-shadow: 0px 0px 1px #000;
     animation: moveFromBottom 300ms ease;
 }
@@ -40,6 +47,8 @@ ul {
     position: fixed;
     height: 100%;
     overflow: auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
   }
   
   li a {
@@ -57,4 +66,16 @@ ul {
   li a:hover:not(.active) {
     background-color: rgb(86, 191, 240);
     color: white;
+  }
+
+  div {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 25px
+  }
+  h2 {
+    text-align: center;
+    font-style: normal;
+    font-family: 'Comic Sans MS', cursive;
   }

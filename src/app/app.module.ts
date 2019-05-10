@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { AcceuilComponent } from './components/acceuil/acceuil.component';
 import { ClientComponent } from './components/client/client.component';
 import { RouterModule } from '@angular/router';
-
+import {ButtonModule} from 'primeng/button';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Acceuil2Component } from './components/acceuil2/acceuil2.component';
@@ -20,6 +20,11 @@ import { ResumeclientComponent } from './components/resumeclient/resumeclient.co
 import { ClientdetailsComponent } from './components/clientdetails/clientdetails.component';
 import { FraisincresumeComponent } from './components/fraisincresume/fraisincresume.component';
 import { FraisincformComponent } from './components/fraisincform/fraisincform.component';
+import { CompteComponent } from './components/compte/compte.component';
+import { NewcompteComponent } from './components/newcompte/newcompte.component';
+import { MoncompteComponent } from './components/moncompte/moncompte.component';
+import { DetailcompteComponent } from './components/detailcompte/detailcompte.component';
+
 
 @NgModule({
   declarations: [
@@ -35,12 +40,18 @@ import { FraisincformComponent } from './components/fraisincform/fraisincform.co
     ResumeclientComponent,
     ClientdetailsComponent,
     FraisincresumeComponent,
+    CompteComponent,
+    NewcompteComponent,
+    MoncompteComponent,
+    DetailcompteComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    ButtonModule,
     HttpClientModule,
     RouterModule.forRoot([
 
@@ -52,6 +63,7 @@ import { FraisincformComponent } from './components/fraisincform/fraisincform.co
         path: 'client',
         component: ClientComponent
       },
+
       {
         path: 'ajouterclient',
         component: NewclientComponent
@@ -60,15 +72,31 @@ import { FraisincformComponent } from './components/fraisincform/fraisincform.co
         path: 'consulter',
         component: ClientlistComponent
       },
+
+      {
+        path: 'compte',
+        component: CompteComponent
+      },
+      {
+        path: 'consultercompte',
+        component: MoncompteComponent
+      },
+      {
+        path: 'ajoutercompte',
+        component: NewcompteComponent
+      },
       {
         path: 'client/:client_id',
         component: ClientdetailsComponent
-      }
-    ,
-    {
+      },
+      {
+      path: 'compte/:nomCompte',
+      component: DetailcompteComponent
+      },
+      {
       path: 'ajouterclient/:client_id',
       component: NewclientComponent
-    },
+      },
       {
       path: 'fraisIncompressibles',
       component: FraisIncompressibleComponent
@@ -76,14 +104,15 @@ import { FraisincformComponent } from './components/fraisincform/fraisincform.co
       {
         path: 'fraisincform',
         component: FraisincformComponent
-        },
-        {
+      },
+      {
           path: 'fraisincresume',
           component: FraisincresumeComponent
-          }
+      }
     ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

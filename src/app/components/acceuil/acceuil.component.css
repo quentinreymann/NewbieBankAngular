@@ -62,8 +62,20 @@ nav a {
 	border-top: 5px solid #4D9FD6;
 }
 
+.menu-contact:hover {
+	border-top: 5px solid #4D9FD6;
+}
+
 nav li:hover a {
 	padding: 15 px 30px 20px 30px;
 }
 
+p {
+  text-align: center;
+  color: rgb(110, 124, 133);
+  font: 2em Impact, sans-serif ;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+}
 

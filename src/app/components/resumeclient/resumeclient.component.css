@@ -1,7 +1,44 @@
 
-div {
-    text-align: center
+#tableau {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 25px;
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+    border: solid #b0d9f1;
+  
 }
-p {
-    background-color: azure
+#tableau th {
+    margin-left: auto;
+    margin-right:auto;
+    font-size: 25px;
+    font-weight: normal;
+    padding: 8px;
+    
+    color: #039;
+}
+#tableau td {
+    margin-left:auto;
+    margin-right: auto;
+    padding: 8px;
+    border-bottom: 1px solid #fff;
+    color: #669;
+    border-top: 1px solid #fff;
+}
+#tableau tfoot tr td {
+    background: #e8edff;
+    font-size: 16px;
+    color: #99c;
+    text-align:center;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+#tableau tbody tr:hover td {
+    margin-left: 25px;
+    margin-right: 25px;
+    color: #339;
+}
+#tableau a:hover {
+    text-decoration:underline;
+   
 }

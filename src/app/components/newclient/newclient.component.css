@@ -16,30 +16,36 @@ h1
   
 }
 h2 {
-    text-align: center
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive;
 }
 /* Police du texte tapé l'intérieur des champs et mettre une marge à gauche */ input, textarea, select {
     font-family: "Times New Roman", Times, serif;
     font-size:12px;
     margin-left: 30px;
-    text-align: center
+    
     }
     
     label{
-    color: #4463f0; /* Colorer en bleu tous les labels (bah oui, pourquoi pas en bleu ?) */
+    color: #7ab3e9; /* Colorer en bleu tous les labels (bah oui, pourquoi pas en bleu ?) */
     font-weight: bold ;
+    margin-left: 100px;
+    font-size: 24px;
+    
     }
     
-    /* Mettre les titres du groupe en caractères plus grands, en gras et spécifier une couleur*/
-    legend {
-    
-    color: #4463f0; 
-    font-weight: bold;
-    font-size:24px;
-    }
-    
-    /* Mettre une séparation entre les fieldset et colorer l'arrière plan */
+
     fieldset {
+        margin-left: 600px;
+      margin-right: 600px;
     margin-bottom: 20px; 
-    background-color: rgb(216, 241, 245);
+   
+  
     }
+    
+   #button {
+       text-align: center
+   }
+    
+  
+  

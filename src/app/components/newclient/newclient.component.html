@@ -6,41 +6,52 @@
 <h2> Formulaire d'ajout d'un nouveau client </h2><br> <br>
 <form method="post" action="questionnaire.php">
   <fieldset>
-    <legend>Coordonnées</legend> 
-     <label for="titre">Sexe : </label>
-     <select name="titre" [(ngModel)]="client_in_progress.sexe">
+    <table>
+      <tr>
+     <td><label for="titre">Sexe : </label> </td>
+     <td> <select name="titre" [(ngModel)]="client_in_progress.sexe">
       <option value="Femme"  selected="selected">Femme</option>
       <option value="Homme" >Homme</option>
-     </select>
+     </select> </td> </tr>
      <br /> <br>
-     <label for="nom">Nom:</label>
-      <input type="text" [(ngModel)]="client_in_progress.nomClient" name="nom" id="nom" />
-     <br /> <br>
-     <label for="prenom">Prénom:</label>
-      <input type="text" [(ngModel)]="client_in_progress.prenomClient" name="prenom" id="prenom" />
-     <br /> <br>
-     <label for="age">Age:</label>
-     <input type="text" [(ngModel)]="client_in_progress.age" name="age" id="age" />
-    <br /> <br>
-     <label for="tel">Téléphone:</label>
-      <input type="text" [(ngModel)]="client_in_progress.telClient" name="tel" id="tel" />
-      <br /> <br>
-     <label for="adresse">Adresse:</label>
-      <input type="adresse" [(ngModel)]="client_in_progress.adresseClient" name="adresse" id="adresse" />
-     <br /> <br>
-     <label for="age">Date d'aujourd'hui:</label>
-     <input type="text" [(ngModel)]="client_in_progress.dateEnregistrement" name="date" id="date" />
-    <br /> <br>
-    <label for="age">Assigner un compte : id du Compte: </label>
-     <input type="text" [(ngModel)]="client_in_progress.comptes" name="date" id="date" />
-    <br /> <br>
+     <tr>
+     <td><label for="nom">Nom:</label> </td>
+      <td><input type="text" [(ngModel)]="client_in_progress.nomClient" name="nom" id="nom" /> </td>
+     <br /> <br> </tr>
+     <tr>
+     <td> <label for="prenom">Prénom:</label> </td>
+     <td> <input type="text" [(ngModel)]="client_in_progress.prenomClient" name="prenom" id="prenom" /> </td> 
+     <br /> <br> </tr>
+     <tr>
+     <td><label for="age">Age:</label> </td>
+     <td><input type="text" [(ngModel)]="client_in_progress.age" name="age" id="age" /> </td>
+    <br /> <br> </tr>
+    <tr>
+     <td><label for="tel">Téléphone:</label></td>
+      <td><input type="text" [(ngModel)]="client_in_progress.telClient" name="tel" id="tel" /></td>
+      <br /> <br> </tr>
+      <tr>
+     <td><label for="adresse">Adresse:</label></td>
+      <td><input type="adresse" [(ngModel)]="client_in_progress.adresseClient" name="adresse" id="adresse" /></td>
+     <br /> <br> </tr>
+     <tr>
+     <td><label for="age">Date d'aujourd'hui:</label></td>
+     <td><input type="date" value="2019-07-22" min="2019-01-01" max="2019-12-31" [(ngModel)]="client_in_progress.dateEnregistrement" /></td>
+    <br /> <br> </tr>
+    <tr>
+    <td><label for="age">Assigner un compte : id du Compte: </label></td>
+     <td><input type="text" [(ngModel)]="client_in_progress.comptes" name="date" id="date" /></td>
+    
+    
+     <td><button pButton type="button" (click)="CompteClicked()" label="Créer un compte au client" class="ui-button-rounded ui-button-secondary"></button></td>
+    <br /> <br> </tr></table>
   </fieldset>
   
-<div class="input-group">
+<div id="button">
 
-  <input type="button" value="Nouveau Client" (click)="addUpdateClientClicked()"/>
+  <button pButton type="button" (click)="addUpdateClientClicked()" label="Ajouter un Client" class="ui-button-rounded ui-button-secondary"></button>
 </div>
-<div class="spinner-border text-primary" role="status">
-    <span class="sr-only">Loading...</span>
-  </div>
+
   </form>
+
+  

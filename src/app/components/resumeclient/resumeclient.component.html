@@ -1,8 +1,20 @@
 
-<div (click)="userClicked()">
-  <p>{{ client.nomClient }}</p>
-  <p>{{ client.prenomClient }}</p>
-  <button pButton type="button" (click)="editButtonPressed()" label="Modifier un Client" class="ui-button-rounded"></button> &nbsp; &nbsp;
-  <button pButton type="button" (click)="deleteButtonPressed()" label="Supprimer un Client" class="ui-button-rounded"></button>
- 
-  </div> 
+
+<table id="tableau">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">{{ client.prenomClient }} {{ client.nomClient }}</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><button pButton type="button" (click)="userClicked()" label="Fiche détail du client" class="ui-button-rounded"></button></td>
+        <td><button pButton type="button" (click)="editButtonPressed()" label="Modifier un Client" class="ui-button-rounded ui-button-success"></button></td>
+        <td><button pButton type="button" (click)="deleteButtonPressed()" label="Supprimer un Client" class="ui-button-rounded ui-button-danger"></button> </td>
+        
+      </tr>
+      
+    </tbody>
+  </table>
