@@ -1,3 +1,11 @@
 
-<app-resumeclient *ngFor="let client of clients" [client]="client" (userClick)=" userClickedOnClient($event)"></app-resumeclient>
+<h1 style="background-image:url(assets/banque.jpg)">
+    NewbieBank
+  </h1>
+  <br> <br>
+
+  <h2> Liste des Clients </h2>
+<br> <br>
+<app-resumeclient *ngFor="let client of clients" [client]="client" (userClick)="userClickedOnClient($event)"></app-resumeclient>
   
+

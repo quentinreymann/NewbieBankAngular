@@ -1,0 +1,21 @@
+
+<h1 style="background-image:url(assets/banque.jpg)">
+  NewbieBank
+</h1>
+<br> <br>
+
+<form>
+    <fieldset>
+      <table>
+       <tr>
+       <td><label for="nom">Entrez l'identifiant de votre Compte:</label> </td>
+        <td><input [(ngModel)]="compte.idCompte" type="text" name="nom" id="nom" /> </td>
+       <br /> <br> </tr>
+     
+       </table>
+</fieldset>
+<div id="button">
+    <button pButton type="button" (click)="userClickedOnCompte()" label="Voir son compte" class="ui-button-rounded ui-button-secondary"></button>
+</div>
+</form>
+

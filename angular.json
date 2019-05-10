@@ -24,14 +24,11 @@
             ],
             "styles": [
               "src/styles.css",
-<<<<<<< HEAD
-              "src/bs/css/bootstrap.css"
-=======
               "src/bs/css/bootstrap.css",
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/nova-light/theme.css",
               "node_modules/primeng/resources/primeng.min.css"
->>>>>>> 0eb1935cab1c00b137d06cfad2cbeea793286ef6
+
             ],
             "scripts": [],
             "es5BrowserSupport": true

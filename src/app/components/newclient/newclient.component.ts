@@ -64,6 +64,9 @@ console.log(this.client_in_progress);
     );
   }
 
+  public CompteClicked(): void {
+    this.router.navigateByUrl('/ajoutercompte');
+  }
 }
 
 
